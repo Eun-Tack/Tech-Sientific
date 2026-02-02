@@ -1,5 +1,5 @@
-import React from 'react';
-import { Clock, Bookmark } from 'lucide-react';
+import type { FC } from 'react';
+import { Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -12,9 +12,10 @@ interface CardProps {
     date: string;
     readTime: string;
     thumbnail: string;
+    category?: string;
 }
 
-const Card = ({ id, title, excerpt, tags, author, date, readTime, thumbnail }: CardProps) => {
+const Card: FC<CardProps> = ({ id, title, excerpt, tags, author, date, readTime, thumbnail }) => {
     return (
         <motion.div
             whileHover={{ y: -5 }}
