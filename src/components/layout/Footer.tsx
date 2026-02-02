@@ -1,5 +1,7 @@
 
 
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
     return (
         <footer className="bg-navy-900 border-t border-slate-800 pt-16 pb-8 mt-20">
@@ -19,19 +21,19 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold text-white mb-4">Categories</h4>
                         <ul className="space-y-2 text-sm text-slate-400">
-                            <li><a href="#" className="hover:text-primary-blue">Industry Trends</a></li>
-                            <li><a href="#" className="hover:text-primary-blue">Tech Deep Dive</a></li>
-                            <li><a href="#" className="hover:text-primary-blue">Product Research</a></li>
-                            <li><a href="#" className="hover:text-primary-blue">Governance</a></li>
+                            <li><Link to="/category/industry-trends" className="hover:text-primary-blue">Industry Trends</Link></li>
+                            <li><Link to="/category/tech-trends" className="hover:text-primary-blue">Tech Deep Dive</Link></li>
+                            <li><Link to="/category/product-research" className="hover:text-primary-blue">Product Research</Link></li>
+                            <li><Link to="/category/governance" className="hover:text-primary-blue">Governance</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="font-bold text-white mb-4">Community</h4>
                         <ul className="space-y-2 text-sm text-slate-400">
-                            <li><a href="#" className="hover:text-primary-blue">Documents & Guides</a></li>
-                            <li><a href="#" className="hover:text-primary-blue">Q&A</a></li>
-                            <li><a href="#" className="hover:text-primary-blue">Gallery</a></li>
+                            <li><Link to="/community" className="hover:text-primary-blue">Documents & Guides</Link></li>
+                            <li><Link to="/community" className="hover:text-primary-blue">Q&A</Link></li>
+                            <li><Link to="/community" className="hover:text-primary-blue">Gallery</Link></li>
                         </ul>
                     </div>
 
@@ -57,8 +59,8 @@ const Footer = () => {
                         © 2026 T Scientific. All rights reserved.
                     </p>
                     <div className="flex gap-6 text-slate-500 text-sm">
-                        <a href="#" className="hover:text-white">Privacy Policy</a>
-                        <a href="#" className="hover:text-white">Terms of Service</a>
+                        <Link to="#" className="hover:text-white">Privacy Policy</Link>
+                        <Link to="#" className="hover:text-white">Terms of Service</Link>
                     </div>
                 </div>
             </div>

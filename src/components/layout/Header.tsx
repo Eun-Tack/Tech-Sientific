@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Search, Menu, X, Moon, Sun } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -34,22 +35,22 @@ const Header = () => {
                 {/* Logo */}
                 <div className="flex items-center gap-2">
                     {/* Placeholder for T Scientific Logo - Text for now */}
-                    <a href="/" className="text-2xl font-bold tracking-tighter text-white">
+                    <Link to="/" className="text-2xl font-bold tracking-tighter text-white">
                         T <span className="text-primary-blue">SCIENTIFIC</span> <span className="text-sm font-normal text-slate-400 ml-1">Tech Blog</span>
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Desktop Menu */}
                 <nav className="hidden md:flex items-center gap-8">
                     {menuItems.map((item) => (
-                        <a
+                        <Link
                             key={item.name}
-                            href={item.href}
+                            to={item.href}
                             className="text-sm font-medium text-slate-300 hover:text-primary-blue transition-colors relative group"
                         >
                             {item.name}
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-blue transition-all group-hover:w-full" />
-                        </a>
+                        </Link>
                     ))}
                 </nav>
 
@@ -86,14 +87,14 @@ const Header = () => {
                     >
                         <nav className="flex flex-col p-4 gap-4">
                             {menuItems.map((item) => (
-                                <a
+                                <Link
                                     key={item.name}
-                                    href={item.href}
+                                    to={item.href}
                                     className="text-slate-300 hover:text-primary-blue py-2"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {item.name}
-                                </a>
+                                </Link>
                             ))}
                         </nav>
                     </motion.div>
