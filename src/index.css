@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  --font-sans: 'Pretendard', 'Noto Sans KR', sans-serif;
+
+  --color-primary-blue: #3B82F6;
+  --color-primary-dark-blue: #1E3A8A;
+
+  --color-navy-900: #0F172A;
+  --color-navy-800: #1E293B;
+  --color-navy-700: #334155;
+
+  --color-purple-accent: #8B5CF6;
+
+  /* Retain specific names if needed, or map generic vars */
+  --color-card-bg: #1E293B;
+  --color-dark-bg: #0F172A;
+}
+
+:root {
+  /* Legacy/Helper variables if strictly needed for inline styles, 
+     but Try to use Tailwind classes where possible. */
+  --primary-blue: #3B82F6;
+  --dark-bg: #0F172A;
+  --card-bg: #1E293B;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --purple-accent: #8B5CF6;
+}
+
+body {
+  @apply bg-navy-900 text-slate-100 font-sans;
+  background-color: var(--dark-bg);
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card-bg);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-blue);
+}
