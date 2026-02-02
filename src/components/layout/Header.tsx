@@ -36,7 +36,7 @@ const Header = () => {
                 <div className="flex items-center gap-2">
                     {/* Placeholder for T Scientific Logo - Text for now */}
                     <Link to="/" className="text-2xl font-bold tracking-tighter text-white">
-                        T <span className="text-primary-blue">SCIENTIFIC</span> <span className="text-sm font-normal text-slate-400 ml-1">Tech Blog</span>
+                        <span className="text-primary-blue">T</span>ech<span className="text-primary-blue">Sientific</span> <span className="text-sm font-normal text-slate-400 ml-1">Tech Blog</span>
                     </Link>
                 </div>
 
