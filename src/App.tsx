@@ -9,7 +9,7 @@ import CommunityPage from './pages/Community';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen bg-navy-900 text-slate-100 flex flex-col font-sans">
         <Header />
 
